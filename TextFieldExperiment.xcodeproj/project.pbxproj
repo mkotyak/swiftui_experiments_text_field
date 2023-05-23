@@ -8,21 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		73D77EAF29EE85AD005524B6 /* TextFieldExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D77EAE29EE85AD005524B6 /* TextFieldExperimentApp.swift */; };
-		73D77EB129EE85AD005524B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D77EB029EE85AD005524B6 /* ContentView.swift */; };
 		73D77EB329EE85AE005524B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D77EB229EE85AE005524B6 /* Assets.xcassets */; };
 		73D77EB729EE85AE005524B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D77EB629EE85AE005524B6 /* Preview Assets.xcassets */; };
-		73D77EC529EE9F48005524B6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D77EC429EE9F48005524B6 /* Home.swift */; };
+		73D77EC529EE9F48005524B6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D77EC429EE9F48005524B6 /* HomeView.swift */; };
 		73D77EC729EE9F66005524B6 /* TFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D77EC629EE9F66005524B6 /* TFManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73D77EAB29EE85AD005524B6 /* TextFieldExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D77EAE29EE85AD005524B6 /* TextFieldExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExperimentApp.swift; sourceTree = "<group>"; };
-		73D77EB029EE85AD005524B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73D77EB229EE85AE005524B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D77EB429EE85AE005524B6 /* TextFieldExperiment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextFieldExperiment.entitlements; sourceTree = "<group>"; };
 		73D77EB629EE85AE005524B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		73D77EC429EE9F48005524B6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		73D77EC429EE9F48005524B6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		73D77EC629EE9F66005524B6 /* TFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,11 +54,11 @@
 		73D77EAD29EE85AD005524B6 /* TextFieldExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				73D77EC329EE9F2E005524B6 /* Experiment1 */,
-				73D77EAE29EE85AD005524B6 /* TextFieldExperimentApp.swift */,
 				73D77EB229EE85AE005524B6 /* Assets.xcassets */,
-				73D77EB429EE85AE005524B6 /* TextFieldExperiment.entitlements */,
+				73D77EC329EE9F2E005524B6 /* Experiment1 */,
 				73D77EB529EE85AE005524B6 /* Preview Content */,
+				73D77EB429EE85AE005524B6 /* TextFieldExperiment.entitlements */,
+				73D77EAE29EE85AD005524B6 /* TextFieldExperimentApp.swift */,
 			);
 			path = TextFieldExperiment;
 			sourceTree = "<group>";
@@ -76,8 +74,7 @@
 		73D77EC329EE9F2E005524B6 /* Experiment1 */ = {
 			isa = PBXGroup;
 			children = (
-				73D77EB029EE85AD005524B6 /* ContentView.swift */,
-				73D77EC429EE9F48005524B6 /* Home.swift */,
+				73D77EC429EE9F48005524B6 /* HomeView.swift */,
 				73D77EC629EE9F66005524B6 /* TFManager.swift */,
 			);
 			path = Experiment1;
@@ -153,8 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D77EB129EE85AD005524B6 /* ContentView.swift in Sources */,
-				73D77EC529EE9F48005524B6 /* Home.swift in Sources */,
+				73D77EC529EE9F48005524B6 /* HomeView.swift in Sources */,
 				73D77EAF29EE85AD005524B6 /* TextFieldExperimentApp.swift in Sources */,
 				73D77EC729EE9F66005524B6 /* TFManager.swift in Sources */,
 			);
@@ -303,10 +299,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MK.TextFieldExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -341,10 +339,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MK.TextFieldExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

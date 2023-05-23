@@ -1,12 +1,20 @@
 import SwiftUI
 
-struct Home: View {
-    @StateObject var manager = TFManager()
+struct HomeView: View {
+    private enum Constants {
+        static var maxTextLength: Int { 15 }
+        static var textFieldPlaceholder: String { "User name" }
+    }
+
+    @StateObject var manager: TFManager
     @State var isTapped = false
 
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(
+                alignment: .leading,
+                spacing: 4
+            ) {
                 HStack(spacing: 15) {
                     TextField("", text: $manager.text) { status in
                         if status {
@@ -23,7 +31,7 @@ struct Home: View {
                     }
                     .padding(.top, isTapped ? 15 : 0)
                     .background(
-                        Text("User name")
+                        Text(Constants.textFieldPlaceholder)
                             .scaleEffect(isTapped ? 0.8 : 1)
                             .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
                             .foregroundColor(.gray),
@@ -38,7 +46,7 @@ struct Home: View {
 
             HStack {
                 Spacer()
-                Text("\(manager.text.count)/15")
+                Text("\(manager.text.count)/\(Constants.maxTextLength)")
                     .font(.caption)
                     .foregroundColor(.gray)
                     .padding(.trailing)
